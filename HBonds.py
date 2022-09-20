@@ -42,8 +42,8 @@ def BondsRead(filename, indexes):
         else: bonds[b1] = [b2]
         types[tuple(sorted([b1,b2]))] = line[3]
     f.close()
-    if not_in_indexes:
-        print(filename, 'Warning! Indexes are present in hbonds file but not in .xyz file. Omitting them. \n', not_in_indexes)
+    # if not_in_indexes:
+        # print(filename, 'Warning! Indexes are present in hbonds file but not in .xyz file. Omitting them. \n', not_in_indexes)
     return bonds, types
 
 
@@ -111,7 +111,6 @@ def FindLoopsTails(bonds, beg, end, gaps, minloop = 6, mintail = 4, maxbonds = 0
                             if t1-last > maxbonds or LT[loop][-1][0] < loop[0]:
                                 LT[loop].append((t1,nr-1))
                             else:        # lacze obecny ogon z poprzednim
-                                print('!', loop, nr)
                                 LT[loop].append((LT[loop].pop()[0], nr-1))
                             last = nr
                         t1 = nr+1

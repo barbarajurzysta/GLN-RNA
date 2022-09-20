@@ -2,7 +2,7 @@
 
 ## Usage examples
 All RNAs:  
-`./countGLN.sh -i downloaded.txt -o out.txt -m -1 -t df`
+`./countGLN.sh -i downloaded.txt -o out.txt -m -1 -t df -j`
 
 Single RNA:  
 `python3 countGLN.py -x pliki/PDBID.xyz -b pliki/PDBID_bonds.csv --out df --maxbonds -1 --name PDBID --notjoined`
